@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting</title>
+    <link rel="icon" type="image/png" href="img/Calendar/android-chrome-192x192.png"/>
+    <link rel="stylesheet" type="text/css" href ="external/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="external/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href ="css/custom.css">
+
+    
+</head>
+<body>      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mb-2 mb-lg-0 ps-5">
+            <li class="nav-item ">
+                <a class="nav-link"  href="index.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Meetings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Teams.html">Teams</a>
+            </li>
+            </ul>
+
+        <ul class ="navbar-nav ms-auto mb-2 mb-lg-0 pe-5"> <!--using pe-5 -->
+            <li class="nav-item ">
+                <a class="nav-link" href="#"> LOGOUT</a>
+            </li>
+            </ul>
+
+        </div>
+        </div>
+  </nav>
+
+    <br>
+
+
+    <main>
+    <!-- <div style="margin-left: 150px;margin-right: 150px;"> -->
+        <!-- Heading -->
+        <div class="container-fluid">
+            <h1 class="ps-5">💼 Meeting </h1>
+            <hr  class="ms-5 me-5"/>
+        </div>
+        <!-- Headign Ends -->
+
+        <div class="container-fluid mb-0">
+            <div class =" me-5 ms-5">
+                <div class="btn-group">
+                    <input type="radio" class="btn-check" name="options-outlined" id="Filter_search" autocomplete="off" checked>
+                    <label for="Filter_search">
+                        <a class="btn btn-outline-primary border-bottom-0 rounded-top-only me-0"  href="Meeting.html" >
+                            <h6 class="p-1 pb-0">Filter/Search a Meeting</h6>
+                        </a>
+                    </label>
+                    
+                    <input type="radio" class="btn-check" name="options-outlined" id="Filter_search" autocomplete="off" checked>
+                    <label for="Filter_search">
+                        <a class="btn btn-outline-primary border-bottom-0 rounded-top-only me-0 active"  href="#">
+                            <h6 class="p-1 pb-0">Create Meeting</h6>
+                        </a>
+                    </label>
+                </div>
+                    <!-- <hr class="mt-0 mb-0 ps-5 pe-5" style="background-color:#0d6efd; opacity:1 !important"> -->
+                
+            
+
+                <div class="bg-primary mt-0 p-3 rounded-bottom rounded-end">
+                    <div class = "text-white">
+                        <h3 >Create Meeting</h3>
+                        <hr style="border: 3px #fff;background-color:#fff;">
+                        
+                        <form>
+                            <h5 class="ps-1"> Meet Date </h5>
+                            <div class="d-flex bd-highlight mb-3">
+                                <div class="col-auto">
+                                    <input type="date" class="me-5 form-control" id ="date-select">
+                                </div>
+                            </div>
+
+                            <h5 class="ps-1 pt-2"> Select Time</h5>
+                            <div class="d-flex justify-content-between bd-highlight mb-3">
+                                <div class="col-auto">
+                                    <div class="input-group">
+                                        <span class="input-group-text col-auto">Start Time</span>
+                                        <input type="Time" aria-label="Start Time" class="form-control ">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class=" input-group">
+                                        <span class="input-group-text">End Time</span>
+                                        <input type="Time" aria-label="End Time" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                <button type="submit" class="btn btn-check"></button>
+                                </div>
+                            </div>
+
+                            <h5 class="ps-1 pt-2"> Description</h5>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="Search" style="height: 75px"></textarea>
+                                <label for="Search" class="text-dark">What is the agenda of the Meeting?</label>
+                            </div>
+                            
+                            <h5 class="ps-1 pt-4"> Enter Email ids</h5>
+                            <div class="mb-3 ">
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="john.doe@example.com , @Accounting , Jane.did@another.in">
+                                <div id="emailHelp" class="form-text ps-1" style="color:lightgray">Separate the email ids with commas - Team short names always begin with @</div>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-dark mt-1 p-2 ps-5 pe-5 align-items-end">Submit</button>
+                        </form>
+        
+                    </div>
+                </div>  
+            </div>
+        </div>
+    <!-- </div> -->
+    </main>
+    
+    
+</body>
+</html>

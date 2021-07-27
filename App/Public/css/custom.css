@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box
+}
+/* 
+a:link {
+  color: green !important;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+} */
+
+
+@media (prefers-reduced-motion:no-preference) {
+    :root {
+        scroll-behavior: smooth
+    }
+}
+.meeting-item{
+  box-sizing: border-box !important;
+  background-color: hsl(210, 100%, 87%)!important;
+  border-radius: 0.8rem;
+
+  width: auto;
+  border-left: 10px solid hsl(210, 100%, 48%) !important;
+
+  /* left:0;
+  right:0; */
+}
+
+.meeting-item2::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.meeting-item2::-webkit-scrollbar-track {
+  background: rgba(240, 240, 240, 0.4)!important;
+  border-radius: 10px!important;
+}
+ 
+.meeting-item2::-webkit-scrollbar-thumb {
+  background: rgb(180, 180, 180)!important;
+  border-radius: 100px!important;
+}
+
+.meeting-item2::-webkit-scrollbar-thumb:hover {
+  background: #555!important;
+}
+.shadow-white {
+  box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.86) !important
+}
+.meeting-item2.gradient-back{
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%) !important;
+  border-left: 10px solid hsl(201, 100%, 0%,0.9) !important;
+}
+
+.meeting-item2{
+  box-sizing: border-box !important;
+  border-radius: 0.8rem;
+  width :calc(100% ) !important;
+  background-color: hsl(201, 100%, 90%)!important;
+  border-left: 10px solid hsl(201, 100%, 50%) !important;
+  padding-left: inherit;
+  padding-right: inherit;
+  white-space: wrap;
+  overflow: scroll;
+  text-overflow: ellipsis;
+  overflow-x: hidden !important;
+  /* left:0;
+  right:0; */
+}
+.Calendar-Time{
+  flex: 0 0 auto;
+  width: 3.5rem;
+  text-align: right;
+  vertical-align: text-top;
+  align-self: flex-start;
+
+}
+.Calendar-margin{
+  flex: 0 0 auto;
+  width: 1% !important;
+}
+.Calendar-Line{
+  flex: 21 0 auto;
+  background-color: #f9f9f9 !important
+}
+.aactive {
+    color: #6610f2 !important;
+    background-color: #6610f2!important;
+    text-decoration: line-through
+}
+/* label.btn.folder_selector{
+
+}
+a.btn.folder_selector.active{
+
+} */
+.rounded-4 {
+    border-radius: .35rem !important
+}
+.rounded-5 {
+    border-radius: .4rem !important
+}
+.rounded-6 {
+    border-radius: .45rem !important
+}
+.rounded-big {
+    border-radius: 2rem !important
+}
+
+.rounded-top-inhe {
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important
+}
+
+.rounded-end-inhe {
+    border-top-right-radius: .25rem !important;
+    border-bottom-right-radius: .25rem !important
+}
+
+.rounded-bottom-inhe {
+    border-bottom-right-radius: .25rem !important;
+    border-bottom-left-radius: .25rem !important
+}
+
+.rounded-start-inhe {
+    border-bottom-left-radius: .25rem !important;
+    border-top-left-radius: .25rem !important
+}
+
+.btn.rounded-top-only {
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0 !important
+}
+.calendar{
+    margin-left: 8rem !important;
+    margin-right: 6rem !important;
+    width: auto;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .calendar-item{
+    min-height: 60px !important;
+    border-top: 2px solid #d5d5d5 !important;
+
+  }
+  .text-time-calendar{
+
+    color: #b5b5b5 !important;
+
+  }
+
+  .ps-7{
+    padding-left: 4.5rem !important;
+  }
+  .pe-7{
+    padding-right: 4.5rem !important;
+  }
+  .ms-7{
+    margin-left: 4.5rem !important;
+  }
+  .me-7{
+    margin-right: 4.5rem !important;
+  }
+  .ps-10{
+    padding-left: 7rem !important;
+  }
+  .pe-10{
+    padding-right: 7rem !important;
+  }
+  .ms-10{
+    margin-left: 7rem !important;
+  }
+  .me-10{
+    margin-right: 7rem !important;
+  }
+  .bg-new-green {
+    background-color: #a0eec0 !important
+}
+
+  nav.bg-opacity-80 {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+  }
+  nav.bg-opacity-90 {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+  }
+  nav.bg-opacity-95 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }

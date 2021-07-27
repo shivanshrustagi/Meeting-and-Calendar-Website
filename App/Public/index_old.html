@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <link rel="icon" type="image/png" href="img/Calendar/android-chrome-192x192.png"/>
+    <link rel="stylesheet" type="text/css" href ="external/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href ="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="external/dist/js/bootstrap.min.js"></script>
+    <!-- <style>
+      .calendar{
+        margin-left: 8rem !important;
+        margin-right: 6rem !important;
+        width: auto;
+        padding-right: var(--bs-gutter-x, .75rem);
+        padding-left: var(--bs-gutter-x, .75rem);
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .calendar .calendar-item{
+        min-height: 60px;
+        border-top: 1px solid ;
+
+      }
+
+      .ps-7{
+        padding-left: 4.5rem !important;
+      }
+      .pe-7{
+        padding-right: 4.5rem !important;
+      }
+      .ms-7{
+        margin-left: 4.5rem !important;
+      }
+      .me-7{
+        margin-right: 4.5rem !important;
+      }
+
+      .Date-nav {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    </style> -->
+    
+
+
+</head>
+<body>
+ 
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav mb-2 mb-lg-0 ps-5">
+                <li class="nav-item ">
+                  <a class="nav-link active" aria-current="page" href="#">Calendar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Meeting.html">Meetings</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Teams.html">Teams</a>
+                </li>
+              </ul>
+
+            <ul class ="navbar-nav ms-auto mb-2 mb-lg-0 pe-5"> <!--using pe-5 -->
+                <li class="nav-item ">
+                  <a class="nav-link" href="#"> Logout</a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+
+      <br>
+      <div class="container-fluid">
+        <h1 class="ps-5">🗓️ Calendar</h1>
+        <hr  class="ms-5 me-5 mb-0 pb-0"/>
+      </div>
+
+      <nav class="sticky-top navbar-light bg-opacity-95" style="width: 100%;">
+
+          <div class="pt-1 ps-7 pe-7 d-flex flex-row justify-content-between">
+            <div class="p-2">
+              <h4 class="mb-1" >Today, July 22</h4>
+
+              <h6 class="text-muted "> Saturday</h6> 
+            </div>
+
+            <div class="p-2">
+              <input type="date" class=" form-control" id ="date-select" style="width:165px">
+            </div>
+          </div>
+
+      </nav>
+
+      <!-- <nav class="sticky-top navbar-light bg-opacity-80" style="width: 100%;">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+
+    </nav>  
+
+      <nav class="sticky-top">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      </nav> -->
+
+      <br/>
+
+
+      <main>
+        <div class="container-fluid ps-10 pe-10">
+          <div class="d-flex row">
+              <div class="Calendar-Time p-0">
+                <p class="mt-0 pt-0 text-time-calendar" >00:00 &nbsp</p>
+              </div>
+              <div class ="Calendar-margin p-0 ">
+                <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+              </div>
+              <div class="Calendar-Line col-3 p-0">
+                <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+              </div>
+          </div>
+          <div class="d-flex row">
+              <div class="Calendar-Time p-0">
+                <p class="mt-0 pt-0 text-time-calendar" >01:00 &nbsp</p>
+              </div>
+              <div class ="Calendar-margin p-0 ">
+                <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+              </div>
+              <div class="Calendar-Line col-3 p-0">
+                <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+              </div>
+          </div>
+          <div class="d-flex row">
+              <div class="Calendar-Time p-0">
+                <p class="mt-0 pt-0 text-time-calendar" >02:00 &nbsp</p>
+              </div>
+              <div class ="Calendar-margin p-0 ">
+                <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+              </div>
+              <div class="Calendar-Line col-3 p-0">
+                <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+              </div>
+          </div>
+        <div class="d-flex row">
+            <div class="Calendar-Time p-0">
+              <p class="mt-0 pt-0 text-time-calendar" >03:00 &nbsp</p>
+            </div>
+            <div class ="Calendar-margin p-0 ">
+              <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+            <div class="Calendar-Line col-3 p-0">
+              <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+        </div>
+        <div class="d-flex row">
+            <div class="Calendar-Time p-0">
+              <p class="mt-0 pt-0 text-time-calendar" >04:00 &nbsp</p>
+            </div>
+            <div class ="Calendar-margin p-0 ">
+              <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+            <div class="Calendar-Line col-3 p-0">
+              <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+        </div>
+        <div class="d-flex row">
+            <div class="Calendar-Time p-0">
+              <p class="mt-0 pt-0 text-time-calendar" >05:00 &nbsp</p>
+            </div>
+            <div class ="Calendar-margin p-0 ">
+              <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+            <div class="Calendar-Line col-3 p-0">
+              <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+        </div>
+        <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >06:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+        </div>
+        <div class="d-flex row">
+            <div class="Calendar-Time p-0">
+              <p class="mt-0 pt-0 text-time-calendar" >07:00 &nbsp</p>
+            </div>
+            <div class ="Calendar-margin p-0 ">
+              <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+            <div class="Calendar-Line col-3 p-0">
+              <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+        </div>
+        <div class="d-flex row">
+            <div class="Calendar-Time p-0">
+              <p class="mt-0 pt-0 text-time-calendar" >08:00 &nbsp</p>
+            </div>
+            <div class ="Calendar-margin p-0 ">
+              <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+            <div class="Calendar-Line col-3 p-0">
+              <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+        </div>
+        <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >09:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+        </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >10:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+        </div>
+        <div class="d-flex row">
+            <div class="Calendar-Time p-0">
+              <p class="mt-0 pt-0 text-time-calendar" >11:00 &nbsp</p>
+            </div>
+            <div class ="Calendar-margin p-0 ">
+              <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+            <div class="Calendar-Line col-3 p-0">
+              <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+            </div>
+        </div>         
+        <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >12:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >13:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >14:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >15:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div>
+      <div class="d-flex row">
+        <div class="Calendar-Time p-0">
+          <p class="mt-0 pt-0 text-time-calendar" >16:00 &nbsp</p>
+        </div>
+        <div class ="Calendar-margin p-0 ">
+          <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+        <div class="Calendar-Line col-3 p-0">
+          <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >17:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >18:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div>
+      <div class="d-flex row">
+        <div class="Calendar-Time p-0">
+          <p class="mt-0 pt-0 text-time-calendar" >19:00 &nbsp</p>
+        </div>
+        <div class ="Calendar-margin p-0 ">
+          <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+        <div class="Calendar-Line col-3 p-0">
+          <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+      </div>
+      <div class="d-flex row">
+        <div class="Calendar-Time p-0">
+          <p class="mt-0 pt-0 text-time-calendar" >20:00 &nbsp</p>
+        </div>
+        <div class ="Calendar-margin p-0 ">
+          <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+        <div class="Calendar-Line col-3 p-0">
+          <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >21:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div> 
+      <div class="d-flex row">
+        <div class="Calendar-Time p-0">
+          <p class="mt-0 pt-0 text-time-calendar" >22:00 &nbsp</p>
+        </div>
+        <div class ="Calendar-margin p-0 ">
+          <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+        <div class="Calendar-Line col-3 p-0">
+          <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+        </div>
+      </div>
+      <div class="d-flex row">
+          <div class="Calendar-Time p-0">
+            <p class="mt-0 pt-0 text-time-calendar" >23:00 &nbsp</p>
+          </div>
+          <div class ="Calendar-margin p-0 ">
+            <div class="ps-1 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+          <div class="Calendar-Line col-3 p-0">
+            <div class="p-0 border-top border-secondary calendar-item bd-highlight"></div>
+          </div>
+      </div> 
+
+
+
+
+        </div>
+
+        <br>
+        <br>
+
+        <div class="calendar">
+        <div class="d-flex flex-column bd-highlight mb-3">
+            <div class="p-2 border-top border-info calendar-item bd-highlight">00:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">01:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">02:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">03:00</div>
+            <div class="p-2 border-top border-info calendar-item bd-highlight">04:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">05:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">06:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">07:00</div>
+            <div class="p-2 border-top border-info calendar-item bd-highlight">08:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">09:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">10:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">11:00</div>
+            <div class="p-2 border-top border-info calendar-item bd-highlight">12:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">13:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">14:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">15:00</div>
+            <div class="p-2 border-top border-info calendar-item bd-highlight">16:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">17:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">18:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">19:00</div>
+            <div class="p-2 border-top border-info calendar-item bd-highlight">20:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">21:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">22:00</div>
+            <div class="p-2 border-top border-info bd-highlight calendar-item">23:00</div> 
+          </div>
+        </div>
+    
+        <div class = "container">
+            Lwaasaorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ullam nisi voluptatum quibusdam ipsum, expedita ipsa optio officiis architecto sint, adipisci enim. Unde facilis iste et doloribus iusto distinctio earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem doloribus suscipit odit amet in praesentium, impedit quos itaque mollitia at? Excepturi hic itaque facilis earum perspiciatis exercitationem beatae voluptatem voluptatum!
+        </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting</title>
+    <link rel="icon" type="image/png" href="img/Calendar/android-chrome-192x192.png"/>
+    <link rel="stylesheet" href ="external/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="external/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href ="css/custom.css">
+    <!-- <style>
+      .calendar{
+        margin-left: 8rem !important;
+        margin-right: 6rem !important;
+        width: auto;
+        padding-right: var(--bs-gutter-x, .75rem);
+        padding-left: var(--bs-gutter-x, .75rem);
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .calendar .calendar-item{
+        min-height: 50px;
+        border-top: 1px solid ;
+
+      }
+
+      .ps-7{
+        padding-left: 4.5rem !important;
+      }
+      .pe-7{
+        padding-right: 4.5rem !important;
+      }
+      .ms-7{
+        margin-left: 4.5rem !important;
+      }
+      .me-7{
+        margin-right: 4.5rem !important;
+      }
+
+      .Date-nav {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+      .btn.rounded-top-only {
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0 !important
+}
+    </style> -->
+    
+</head>
+<body>      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mb-2 mb-lg-0 ps-5">
+            <li class="nav-item ">
+                <a class="nav-link"  href="index.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Meetings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Teams.html">Teams</a>
+            </li>
+            </ul>
+
+        <ul class ="navbar-nav ms-auto mb-2 mb-lg-0 pe-5"> <!--using pe-5 -->
+            <li class="nav-item ">
+                <a class="nav-link" href="#"> LOGOUT</a>
+            </li>
+            </ul>
+
+        </div>
+        </div>
+  </nav>
+
+    <br>
+    <div class="container-fluid">
+        <h1 class="ps-5">💼 Meeting </h1>
+        <hr  class="ms-5 me-5"/>
+    </div>
+
+    <main>
+    <!-- <div class="container-fluid">
+        <button type ="radio" href="#" class="btn btn-outline-secondary border-bottom-0 rounded-top-only"><a class="nav-link"  href="index.html">Calendar</a></button>
+
+        <button type ="radio" href="#" class="btn btn-outline-secondary border-bottom-0 rounded-top-only"><a class="nav-link" href="Teams.html">Teams</a></button>
+    </div>
+    <br> -->
+    <div class="container-fluid mb-0">
+        <div class="btn-group ps-5">
+            <input type="radio" class="btn-check me-0" name="options-outlined" id="Filter_search" autocomplete="off" checked>
+            <label for="Filter_search">
+                <a class="btn btn-outline-primary border-bottom-0 rounded-top-only me-0"  href="Meeting.html">
+                  Filter/Search a Meeting
+                </a>
+            </label>
+            
+            <input type="radio" class="btn-check me-0" name="options-outlined" id="Filter_search" autocomplete="off" checked>
+            <label for="Filter_search">
+                <a class="btn btn-outline-primary border-bottom-0 rounded-top-only me-0 active"  href="#">
+                  Create Meeting
+                </a>
+            </label>
+        </div>
+
+        <div class="pe-5 ps-5">
+            <hr class="mt-0 ps-5 pe-5" style="background-color:#0d6efd; opacity:1 !important">
+        </div>
+    </div>
+
+    </main>
+    
+    
+</body>
+</html>
